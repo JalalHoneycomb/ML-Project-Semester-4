@@ -1,4 +1,6 @@
 import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent.parent))
 from dataclasses import dataclass
 
 import numpy as np 
@@ -8,11 +10,11 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder,StandardScaler
 
-from exception import CustomException
-from logger import logging
+from src.exception import CustomException
+from src.logger import logging
 import os
 
-from utils import save_object
+from src.utils import save_object
 
 @dataclass
 class DataTransformationConfig:
