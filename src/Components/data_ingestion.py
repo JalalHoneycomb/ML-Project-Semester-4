@@ -5,8 +5,8 @@ sys.path.append(str(Path(__file__).parent.parent.parent))
 
 import pandas as pd
 from dataclasses import dataclass
-from exception import CustomException
-from logger import logging
+from src.exception import CustomException
+from src.logger import logging
 from sklearn.model_selection import train_test_split
 
 

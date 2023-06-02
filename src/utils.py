@@ -1,6 +1,7 @@
 import os
 import sys
-
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent.parent))
 import numpy as np 
 import pandas as pd
 import dill
@@ -8,7 +9,7 @@ import pickle
 from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
 
-from exception import CustomException
+from src.exception import CustomException
 
 def save_object(file_path, obj):
     try:
